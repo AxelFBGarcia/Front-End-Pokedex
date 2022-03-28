@@ -26,14 +26,19 @@
   position: absolute;
   width: 100%;
   height: 100%;
-  background-image: url("/img/background.png");
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
   overflow: hidden;
   --web-view-name: Web 1920 – 1;
   --web-view-id: Web_1920__1;
   --web-enable-deep-linking: true;
+}
+}.Web_1920__1_Class img{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-image: url("/img/background.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 .Componente_27__1_Class {
   position: absolute;
