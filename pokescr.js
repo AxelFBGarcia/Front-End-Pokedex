@@ -1,4 +1,9 @@
 const fetchPokemon = () => {
+    const stwhite = document.querySelectorAll(".stsh");
+    console.log(stwhite)
+    for (let i = 0; i < stwhite.length; i++) {
+        stwhite[i].style.backgroundColor = "white";
+      }
     const pokeName = document.getElementById("pokeName");
     let pokeInput = pokeName.value.toLowerCase();
     const url = `https://pokeapi.co/api/v2/pokemon/${pokeInput}`;
@@ -35,25 +40,37 @@ const stats2 = (data) => {
     for (let i=0;i<stats.length;i++){
         basestats.push(stats[i].base_stat);
     }
-    let hp = basestats[0];
-    let atk = basestats[1];
-    let def = basestats[2];
-    let spatk = basestats[3];
-    let spdef = basestats[4];
-    let speed = basestats[5];
-    console.log(hp);
+    let hp = Math.round(basestats[0]/10);
+    let atk = Math.round(basestats[1]/10);
+    let def = Math.round(basestats[2]/10);
+    let spatk = Math.round(basestats[3]/10);
+    let spdef = Math.round(basestats[4]/10);
+    let speed = Math.round(basestats[5]/10);
+    console.log(basestats);
 
-    switch (hp/10){
-        case'1':
-        case'2':
-        case'3':
-        case'4':
-        case'5':
-        case'6':
-        case'7':
-        case'8':
-        case'9':
-        case'10':
+    for (let i=0;i<hp;i++){
+        var stcol = String(i+1 + "a")
+        document.getElementById(stcol).style.backgroundColor ="rgb(0, 225, 255)";
+    }
+    for (let i=0;i<atk;i++){
+        var stcol = String(i+1 + "b")
+        document.getElementById(stcol).style.backgroundColor ="rgb(0, 225, 255)";
+    }
+    for (let i=0;i<def;i++){
+        var stcol = String(i+1 + "c")
+        document.getElementById(stcol).style.backgroundColor ="rgb(0, 225, 255)";
+    }
+    for (let i=0;i<spatk;i++){
+        var stcol = String(i+1 + "d")
+        document.getElementById(stcol).style.backgroundColor ="rgb(0, 225, 255)";
+    }
+    for (let i=0;i<spdef;i++){
+        var stcol = String(i+1 + "e")
+        document.getElementById(stcol).style.backgroundColor ="rgb(0, 225, 255)";
+    }
+    for (let i=0;i<speed;i++){
+        var stcol = String(i+1 + "f")
+        document.getElementById(stcol).style.backgroundColor ="rgb(0, 225, 255)";
     }
 }
     
@@ -83,4 +100,3 @@ const pokeImage = (url) => {
     const pokeImg = document.getElementById("pokeImg");
     pokeImg.src = url;
 }
-

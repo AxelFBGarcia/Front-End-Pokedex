@@ -389,7 +389,7 @@ top: 0px;
 .stsh{
   width: 50px;
   height: 7px;
-  background-color: #ffff;
+  background-color: rgb(255, 255, 255);
   border-color: rgb(0, 0, 0);
   border-style: solid;
   border-radius: 5px;
